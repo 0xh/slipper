@@ -1,0 +1,18 @@
+branch-defaults:
+  default:
+    environment: slipper-dev
+  master:
+    environment: slipper-prod
+    group_suffix: null
+environment-defaults:
+  slipper-dev:
+    branch: null
+    repository: null
+global:
+  application_name: slipper
+  default_ec2_keyname: aws_private
+  default_platform: arn:aws:elasticbeanstalk:ap-northeast-1::platform/PHP 7.2 running
+    on 64bit Amazon Linux/2.8.2
+  default_region: ap-northeast-1
+  profile: eb-cli
+  sc: git
