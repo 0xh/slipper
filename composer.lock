@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b482fe55c9eb8aa6037ef286688c35c",
+    "content-hash": "19b45b59fcc72faf2e318c3ef9927d57",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -654,12 +654,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "dev-master",
+            "version": "v1.1.6",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:laravel/nova.git",
+                "reference": "d8baa130fa34aef7834e7c860d414cc0886410cd"
+            },
             "dist": {
-                "type": "path",
-                "url": "./nova",
-                "reference": "6b34fd3882e3cff2dc99d288393e92025bc93094",
-                "shasum": null
+                "type": "zip",
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-d8baa130fa34aef7834e7c860d414cc0886410cd-zip-140212.zip",
+                "reference": "d8baa130fa34aef7834e7c860d414cc0886410cd",
+                "shasum": "f751d02d65fd629fe30f96208e9696d997dbcee4"
             },
             "require": {
                 "cakephp/chronos": "~1.0",
@@ -713,7 +718,8 @@
             "keywords": [
                 "admin",
                 "laravel"
-            ]
+            ],
+            "time": "2018-10-24T22:19:09+00:00"
         },
         {
             "name": "laravel/tinker",
