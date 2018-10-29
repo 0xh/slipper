@@ -12,11 +12,6 @@ npm-debug.log
 yarn-error.log
 .phpunit.result.cache
 .DS_Store
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
 !artisan
 !.env
 !auth.json
