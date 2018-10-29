@@ -34,7 +34,7 @@ jobs:
 
       # run tests!
       - run: vendor/bin/phpunit
-  deploy:
+  deploy_dev:
     docker:
       - image: coxauto/aws-ebcli:latest
 
@@ -42,13 +42,31 @@ jobs:
     steps:
       - checkout
       - run: echo N | eb init
-      - run: eb deploy
+      - run: eb deploy slipper-dev
+  deploy_prod:
+    docker:
+    - image: coxauto/aws-ebcli:latest
+
+    working_directory: ~/repo
+    steps:
+    - checkout
+    - run: echo N | eb init
+    - run: eb deploy slipper-prod
 
 workflows:
   version: 2
   test_and_deploy:
     jobs:
       - test
-      - deploy:
+      - deploy_dev:
           requires:
             - test
+          filters:
+            branches:
+              ignore: master
+      - deploy_prod:
+          requires:
+          - test
+          filters:
+            branches:
+              only: master
